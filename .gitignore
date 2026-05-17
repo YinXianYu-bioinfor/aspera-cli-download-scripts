@@ -1,0 +1,21 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+.logs/
+
+# Downloaded data (examples only, not actual FASTQs)
+*.fastq.gz
+*.fq.gz
+
+# Task status dirs
+.task_status/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

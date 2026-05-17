@@ -1,0 +1,5 @@
+# 修正版：纯路径（不含 era-fasp@ 前缀）
+/vol1/fastq/SRR208/000/SRR20814100/SRR20814100_1.fastq.gz
+/vol1/fastq/SRR208/000/SRR20814100/SRR20814100_2.fastq.gz
+/vol1/fastq/SRR208/000/SRR20814200/SRR20814200_1.fastq.gz
+/vol1/fastq/SRR208/000/SRR20814200/SRR20814200_2.fastq.gz
