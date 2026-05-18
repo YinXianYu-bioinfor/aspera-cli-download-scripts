@@ -234,6 +234,8 @@ ascli --http-proxy=http://proxy:port ...
 
 ## 九、批量下载
 
+> **平台限制**：批量下载脚本（`aspera_batch_download.sh`）**仅适用于 Windows Git Bash**，不支持 PowerShell、CMD、Linux 或 macOS。
+
 ### 适用场景
 需从 EBI 下载大量 FASTQ 文件时，使用批量脚本可避免手动逐条输入命令。
 
@@ -304,6 +306,8 @@ cut -d',' -f1 sra_paths.csv > remote_paths.txt
 ---
 
 ## 十、下载后重命名
+
+> **平台限制**：重命名脚本（`aspera_rename.sh`）**仅适用于 Windows Git Bash**，不支持 PowerShell、CMD、Linux 或 macOS。
 
 ### 适用场景
 批量下载得到的文件名为 `SRRxxxxxx_{1,2}.fastq.gz`，需映射为可读的样本名（SampleID）以便后续分析。

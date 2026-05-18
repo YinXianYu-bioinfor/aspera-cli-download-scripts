@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x aspera_batch_download.sh)",
+      "Bash(./aspera_batch_download.sh -i remote_paths_fixed.txt -o test_download -p 2)",
+      "Bash(./aspera_batch_download.sh -i remote_paths_example.txt -o test_download2 -p 2)",
+      "Bash(bash shell_rename_fastq_paired.sh -i sample_example.txt -d test_rename)",
+      "Bash(./aspera_batch_download.sh -i remote_paths_fixed.txt -o test_r_default -p 2)",
+      "Bash(./aspera_batch_download.sh -i remote_paths_fixed.txt -o test_r_no -p 2 -r no)",
+      "Bash(cp -r test_download2 test_rename_new)",
+      "Bash(bash aspera_rename.sh -d test_rename_new)",
+      "Bash(bash aspera_rename.sh -d test_rename_new -m sample_example.txt)",
+      "Bash(mkdir -p test_empty)",
+      "Bash(bash aspera_rename.sh -d test_empty)",
+      "Bash(bash aspera_rename.sh -d /nonexistent)",
+      "Bash(rm -rf test_rename_new test_empty)",
+      "Bash(mkdir -p scripts examples docs)",
+      "Bash(mv aspera_batch_download.sh scripts/)",
+      "Bash(mv aspera_rename.sh scripts/)",
+      "Bash(mv \"Format_reference_remote_paths_fixed.txt\" examples/remote_paths.txt)",
+      "Bash(mv Format_reference_samples.txt examples/sample.txt)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

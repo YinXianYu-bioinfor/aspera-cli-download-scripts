@@ -1,11 +1,14 @@
 #!/bin/bash
 # Aspera 下载后重命名脚本：将 SRR_ID 批量映射为 SampleID
+# 注意：本脚本仅适用于 Windows Git Bash，不支持 PowerShell/CMD/Linux/macOS
 # 用法：./aspera_rename.sh -d <数据目录> [-m <映射文件>]
 
 # ========== 帮助信息 ==========
 show_help() {
   cat << HELP
 用法: $(basename "$0") -d <数据目录> [-m <映射文件>]
+
+【仅适用于 Windows Git Bash，不支持 PowerShell/CMD/Linux/macOS】
 
 将下载的 SRRxxx_1.fastq.gz / SRRxxx_2.fastq.gz 批量重命名为 SampleID_1.fq.gz / SampleID_2.fq.gz。
 

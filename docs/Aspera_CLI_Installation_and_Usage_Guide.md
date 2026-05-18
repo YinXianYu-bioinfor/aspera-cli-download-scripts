@@ -255,6 +255,8 @@ Example: `/vol1/fastq/SRR180/001/SRR18012601/SRR18012601_1.fastq.gz`
 
 ## 9. Batch Download
 
+> **Platform note**: The batch download script (`aspera_batch_download.sh`) is designed for **Windows Git Bash only**. It will not work in PowerShell, CMD, Linux, or macOS.
+
 ### Use Case
 
 When downloading large numbers of FASTQ files from EBI, the batch script eliminates the need for manual command entry.
@@ -332,6 +334,8 @@ cut -d',' -f1 sra_paths.csv > remote_paths.txt
 ---
 
 ## 10. Post-Download Renaming
+
+> **Platform note**: The rename script (`aspera_rename.sh`) is designed for **Windows Git Bash only**. It will not work in PowerShell, CMD, Linux, or macOS.
 
 ### Use Case
 

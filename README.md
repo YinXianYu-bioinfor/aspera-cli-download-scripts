@@ -54,7 +54,7 @@ cd scripts/
 ## Important Notes
 
 - These scripts are designed for **EBI public data** (fasp.sra.ebi.ac.uk:33001, user era-fasp)
-- The `ascp` command only works in **Git Bash**, not PowerShell/CMD
+- **Platform requirement**: All scripts (`*.sh`) run **only in Windows Git Bash** — not compatible with PowerShell, CMD, Linux, or macOS
 - Batch download supports automatic resume — re-running will skip already-downloaded files
 - For other Aspera servers, modify `REMOTE_USER` and `ASCP_PORT` in the script
 
@@ -120,7 +120,7 @@ cd scripts/
 ## 重要说明
 
 - 这些脚本针对 **EBI 公开数据**设计（fasp.sra.ebi.ac.uk:33001，用户 era-fasp）
-- `ascp` 命令仅在 **Git Bash** 中可用，不支持 PowerShell/CMD
+- **平台限制**：所有脚本（`.sh`）**仅适用于 Windows Git Bash**，不支持 PowerShell、CMD、Linux 或 macOS
 - 批量下载支持断点续传——重新运行会自动跳过已下载的文件
 - 如需连接其他 Aspera 服务器，修改脚本中的 `REMOTE_USER` 和 `ASCP_PORT` 即可
 
