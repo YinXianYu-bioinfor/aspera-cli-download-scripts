@@ -35,7 +35,7 @@ A collection of shell scripts and documentation for downloading FASTQ files from
 - **Aspera CLI** installed (`gem install aspera-cli`)
 - **FASP SDK** installed (`ascli config transferd install`)
 
-See the [English guide](docs/Aspera_CLI_Installation_and_Usage_Guide.md) or [Chinese guide](docs/Aspera_CLI_安装与使用指南.md) for detailed installation steps.
+See the [English guide](docs/Aspera_CLI_Installation_and_Usage_Guide.md) or [Chinese guide](docs/Aspera_CLI_安装与使用指南.md) for detailed installation steps (if `ascli config transferd install` fails with network timeout, see the troubleshooting section).
 
 ### 1. Batch Download
 
@@ -99,7 +99,7 @@ This project is provided as-is for academic and research use.
 
 - **Windows** 系统 + **Git Bash**
 - 已安装 **Aspera CLI**（`gem install aspera-cli`）
-- 已安装 **FASP SDK**（`ascli config transferd install`）
+- 已安装 **FASP SDK**（`ascli config transferd install`，如遇网络超时，参见常见问题）
 
 详细安装步骤请参阅[中文指南](docs/Aspera_CLI_安装与使用指南.md)或[英文指南](docs/Aspera_CLI_Installation_and_Usage_Guide.md)。
 

@@ -14,8 +14,9 @@ Desktop.ini
 # Task status dirs
 .task_status/
 
-# IDE
+# IDE / Editors
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo

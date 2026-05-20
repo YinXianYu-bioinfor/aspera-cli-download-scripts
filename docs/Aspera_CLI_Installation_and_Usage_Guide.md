@@ -226,7 +226,30 @@ ascli server health transfer --url=... --username=... --ssh-keys=...
 - **Cause**: Wrong private key file (e.g., DSA instead of RSA)
 - **Solution**: EBI uses RSA keys — specify `-i ~/.aspera/sdk/aspera_bypass_rsa.pem`
 
-### 7.5 Proxy Environment
+### 7.5 Network timeout during `ascli config transferd install`
+
+- **Issue**:
+  ```
+  ERRR Other(Net::ReadTimeout): Net::ReadTimeout with #<TCPSocket:(closed)>
+  ERRR Other(Net::OpenTimeout): Net::OpenTimeout
+  ```
+- **Cause**: This command downloads the FASP SDK from IBM servers. Network connections to IBM are often unreliable from certain regions (e.g., mainland China).
+- **Solutions**:
+  - **Method 1 (recommended)**: Copy the SDK from a machine where installation already succeeded:
+    ```bash
+    # On the working machine, package ~/.aspera/
+    cd ~ && tar czf aspera_backup.tar.gz .aspera/
+    # Transfer the archive to the target machine, then extract:
+    cd ~ && tar xzf aspera_backup.tar.gz
+    ```
+    Both machines must be the same architecture (Windows 64-bit). After extraction, `ascp` is ready to use — no need to re-run the install command.
+  - **Method 2**: Use an HTTP proxy:
+    ```bash
+    ascli --http-proxy=http://proxy:port config transferd install
+    ```
+  - **Method 3**: Enable a VPN and retry.
+
+### 7.6 Proxy Environment
 
 If using an HTTP proxy, configure it on the command line:
 

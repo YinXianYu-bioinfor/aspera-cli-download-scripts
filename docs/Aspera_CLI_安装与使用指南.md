@@ -207,7 +207,29 @@ ascli server health transfer --url=... --username=... --ssh-keys=...
 - **原因**：使用了错误的私钥文件（如 DSA 而非 RSA）
 - **解决**：EBI 使用 RSA 密钥，指定 `-i ~/.aspera/sdk/aspera_bypass_rsa.pem`
 
-### 5. 代理环境
+### 5. `ascli config transferd install` 报网络超时（Net::ReadTimeout / Net::OpenTimeout）
+- **现象**：
+  ```
+  ERRR Other(Net::ReadTimeout): Net::ReadTimeout with #<TCPSocket:(closed)>
+  ERRR Other(Net::OpenTimeout): Net::OpenTimeout
+  ```
+- **原因**：该命令需要从 IBM 服务器下载 FASP SDK，国内网络环境经常连不上
+- **解决**：
+  - **方法一（推荐）**：找一台已成功安装的设备，打包其 `~/.aspera/` 目录传到本机解压
+    ```bash
+    # 在已成功的设备上打包
+    cd ~ && tar czf aspera_backup.tar.gz .aspera/
+    # 传到本机后在目标设备解压
+    cd ~ && tar xzf aspera_backup.tar.gz
+    ```
+    注意：两台设备需同为 Windows 64-bit 系统。拷贝后 `ascp` 即可直接使用，无需重新运行安装命令。
+  - **方法二**：使用 HTTP 代理
+    ```bash
+    ascli --http-proxy=http://proxy:port config transferd install
+    ```
+  - **方法三**：开启 VPN 后重试
+
+### 6. 代理环境
 如使用 HTTP 代理，可在配置文件中设置：
 ```bash
 ascli --http-proxy=http://proxy:port ...
