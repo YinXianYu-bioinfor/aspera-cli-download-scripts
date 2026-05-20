@@ -3,11 +3,29 @@
 ## Prerequisites
 
 - Windows OS
+- Git Bash (see installation steps below)
 - Ruby >= 3.1 (recommend RubyInstaller WITH Devkit)
 
 ---
 
 ## 1. Installation Steps
+
+### 1.0 Install Git (Get Git Bash)
+
+> All scripts (`.sh`) in this project are designed for **Windows Git Bash only**. You must install Git for Windows first.
+
+1. Visit https://git-scm.com/install/windows to download the Git for Windows installer
+2. Run the installer. Recommended options during setup:
+   - **Select Components**: Make sure "Git Bash Here" is checked (default)
+   - **Choosing the default editor**: Your preference (VS Code or Nano recommended)
+   - **Adjusting your PATH environment**: Select **"Git from the command line and also from 3rd-party software"** (recommended)
+   - **Choosing the terminal emulator**: Select **"Use MinTTY"** (default)
+3. After installation, launch **Git Bash** from the Start Menu
+4. Verify the installation:
+   ```bash
+   git --version
+   ```
+5. All subsequent `.sh` scripts must be run in **Git Bash** — **do not use PowerShell or CMD**
 
 ### 1.1 Install Ruby
 

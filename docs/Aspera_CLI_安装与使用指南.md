@@ -2,11 +2,29 @@
 
 ## 环境要求
 - Windows 系统
+- Git Bash（详见下方安装步骤）
 - Ruby ≥ 3.1（推荐 RubyInstaller WITH Devkit）
 
 ---
 
 ## 一、安装步骤
+
+### 0. 安装 Git（获取 Git Bash）
+
+> 本项目的所有脚本（`.sh`）**仅适用于 Windows Git Bash**，必须先安装 Git for Windows。
+
+1. 访问 https://git-scm.com/install/windows 下载 Git for Windows 安装包
+2. 运行安装程序，安装过程中关键选项推荐：
+   - **Select Components**：勾选 "Git Bash Here"（默认已选）
+   - **Choosing the default editor**：按个人习惯选择（推荐 VS Code 或 Nano）
+   - **Adjusting your PATH environment**：选择 **"Git from the command line and also from 3rd-party software"**（推荐）
+   - **Choosing the terminal emulator**：选择 **"Use MinTTY"**（默认）
+3. 安装完成后，在开始菜单找到 **Git Bash** 并打开
+4. 验证安装：
+   ```bash
+   git --version
+   ```
+5. 后续所有 `.sh` 脚本均在 **Git Bash** 中运行，**不要使用 PowerShell 或 CMD**
 
 ### 1. 安装 Ruby
 1. 访问 https://rubyinstaller.org/downloads/ 下载 **Ruby+Devkit** 最新版本
